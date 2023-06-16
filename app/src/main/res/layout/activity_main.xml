@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7A7A7A" />
+
+        <TableLayout
+            android:id="@+id/NumPad"
+            android:layout_width="330dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/inputText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Input Text"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Num1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum1"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/Num2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum2"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/Num3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum3"
+                    android:text="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Num4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum4"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/Num5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum5"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/Num6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum6"
+                    android:text="6" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Num7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum7"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/Num8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum8"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/Num9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum9"
+                    android:text="9" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/useless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickCancel"
+                    android:text="Cancel" />
+
+                <Button
+                    android:id="@+id/Del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickNum0"
+                    android:text="Del" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/MemoPad"
+            android:layout_width="330dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/inputMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Memo"
+                    android:textAlignment="textStart"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/MemoNum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m1"
+                    android:text="1"
+                    android:textOff="1"
+                    android:textOn="1" />
+
+                <ToggleButton
+                    android:id="@+id/MemoNum2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m2"
+                    android:text="2"
+                    android:textOff="2"
+                    android:textOn="2"
+                    tools:text="2" />
+
+                <ToggleButton
+                    android:id="@+id/MemoNum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m3"
+                    android:text="3"
+                    android:textOff="3"
+                    android:textOn="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/MemoNum4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m4"
+                    android:text="4"
+                    android:textOff="4"
+                    android:textOn="4" />
+
+                <ToggleButton
+                    android:id="@+id/MemoNum5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m5"
+                    android:text="5"
+                    android:textOff="5"
+                    android:textOn="5" />
+
+                <ToggleButton
+                    android:id="@+id/MemoNum6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m6"
+                    android:text="6"
+                    android:textOff="6"
+                    android:textOn="6" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/MemoNum7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m7"
+                    android:text="7"
+                    android:textOff="7"
+                    android:textOn="7" />
+
+                <ToggleButton
+                    android:id="@+id/MemoNum8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m8"
+                    android:text="8"
+                    android:textOff="8"
+                    android:textOn="8" />
+
+                <ToggleButton
+                    android:id="@+id/MemoNum9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m9"
+                    android:text="9"
+                    android:textOff="9"
+                    android:textOn="9" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/DeleteMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="m0"
+                    android:text="DELETE" />
+
+                <Button
+                    android:id="@+id/OkMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="memoOK"
+                    android:text="OK" />
+
+                <Button
+                    android:id="@+id/CancelMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="memoOK"
+                    android:text="Cancel" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="bottom"
+            android:background="#98FF61" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
